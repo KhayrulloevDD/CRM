@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <a href="{% url 'leads:lead_list' %}">Go back to Lead list</a>
     <hr>
     <h1>Create a new Lead</h1>
@@ -14,5 +9,4 @@
         <p>{{ form.as_p }}</p>
         <button type="submit">Create</button>
     </form>
-</body>
-</html>
+{% endblock content %}

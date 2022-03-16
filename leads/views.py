@@ -1,6 +1,15 @@
 from django.shortcuts import render, redirect
+from django.views.generic import TemplateView
 from .models import User, Agent, Lead
 from . forms import LeadForm, LeadModelForm
+
+
+class LandingPageView(TemplateView):
+    template_name = "landing.html"
+
+
+def landing_page(request):
+    return render(request, "landing.html")
 
 
 def lead_list(request):
